@@ -1,0 +1,95 @@
+CREATE OR REPLACE PROCEDURE public.get_all_users(
+	)
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+     CREATE TEMP TABLE temp_users AS
+    SELECT "Id", "FirstName", "LastName", "Email", "Phone"
+    FROM "Users"
+	RETURN;
+END;
+$$;
+
+-----------------------------------------
+
+
+
+CREATE OR REPLACE PROCEDURE public."Insert_User"(
+	IN "FirstName" character varying,
+	IN "LastName" character varying,
+	IN "Email" character varying,
+	IN "Phone" character varying)
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+   
+        INSERT INTO  "Users" ("FirstName","LastName","Email","Phone")
+        VALUES ("FirstName","LastName","Email","Phone");
+        
+    
+END;
+$$;
+
+--------------------------------
+
+CREATE OR REPLACE PROCEDURE public.delete_user(
+	IN p_user_id integer,
+	OUT p_deleted_user_id integer)
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+    DELETE FROM "Users"
+    WHERE "Id" = p_user_id
+    RETURNING "Id" INTO p_deleted_user_id;
+END;
+$$;
+
+-------------------------------------------
+
+CREATE OR REPLACE PROCEDURE public.get_user_by_id(
+	IN p_id integer)
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+     CREATE TEMP TABLE temp_users AS
+    SELECT "Id", "FirstName", "LastName", "Email", "Phone"
+    FROM "Users"
+    WHERE "Id"=p_id;
+	RETURN;
+END;
+$$;
+
+----------------------------------------------
+
+CREATE OR REPLACE PROCEDURE public.search_user_by_name(
+	IN p_name character varying)
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+     CREATE TEMP TABLE temp_users AS
+    SELECT "Id", "FirstName", "LastName", "Email", "Phone"
+    FROM "Users"
+    WHERE "FirstName" ILIKE '%' || p_name || '%' OR "LastName" ILIKE '%' || p_name || '%';
+	RETURN;
+END;
+$$;
+
+------------------------------------------------
+
+CREATE OR REPLACE PROCEDURE public.update_user(
+	IN user_id integer,
+	IN first_name character varying,
+	IN last_name character varying,
+	IN email character varying,
+	IN phone character varying)
+LANGUAGE 'plpgsql'
+AS $$
+BEGIN
+    UPDATE "Users"
+    SET "FirstName" = first_name,
+        "LastName" = last_name,
+		"Email"=email,
+		"Phone"=phone  
+    WHERE "Id" = user_id;
+END;
+$$;

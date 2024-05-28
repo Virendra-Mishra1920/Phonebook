@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "https://localhost:44360/api/user/GetAllUsers",
+      "secure": false
+    }
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhonebookWebApplication", "PhonebookWebApplication.csproj", "{EE6C33C8-AB5B-4919-AC36-666E6D780DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XunitTestUtility", "..\XunitTestUtility\XunitTestUtility.csproj", "{11C4E21B-C343-4B2C-9D7B-FCDB7EE972B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE6C33C8-AB5B-4919-AC36-666E6D780DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6C33C8-AB5B-4919-AC36-666E6D780DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6C33C8-AB5B-4919-AC36-666E6D780DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6C33C8-AB5B-4919-AC36-666E6D780DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C4E21B-C343-4B2C-9D7B-FCDB7EE972B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C4E21B-C343-4B2C-9D7B-FCDB7EE972B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C4E21B-C343-4B2C-9D7B-FCDB7EE972B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C4E21B-C343-4B2C-9D7B-FCDB7EE972B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFED0E64-7825-422A-9411-7E19DCC75DB5}
+	EndGlobalSection
+EndGlobal
